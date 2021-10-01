@@ -63,10 +63,6 @@ func main() {
 			}
 		}
 
-		for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
-			s[i], s[j] = s[j], s[i]
-		}
-
 		result, err := calculate(arrStr)
 		if err != nil {
 			panic(err)
@@ -137,7 +133,7 @@ func parseStr(str string) (string, error) {
 		curr := string(str[idx])
 
 		//fmt.Println("Current: ", curr)
-		//fmt.Println("Stack: ", stack)
+		//fmt.Println("strings: ", stack)
 		//fmt.Println("Result string: ", resultString.String())
 		if curr == OpenBracket {
 			stack = append(stack, OpenBracket)
@@ -196,7 +192,7 @@ func parseStr(str string) (string, error) {
 		}
 
 		resultString.WriteString(" ")
-		//fmt.Println("Stack out : ", stack)
+		//fmt.Println("strings out : ", stack)
 		//fmt.Println("Result string out: ", resultString.String())
 		//fmt.Println()
 	}
